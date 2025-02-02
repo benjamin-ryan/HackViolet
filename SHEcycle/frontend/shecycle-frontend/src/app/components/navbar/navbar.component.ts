@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule, Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,11 +10,5 @@ import { RouterModule, Router } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  constructor(private router: Router) {}
 
-  filterItems(filter: string): void {
-    console.log('Filtering:', filter);
-    this.router.navigate(['items'], { queryParams: { filter } });
-  }
-  
 }

@@ -1,31 +1,33 @@
 <nav>
-  <div class="logo">SHEcycle</div>
+  <div class="logo">
+    <img src="/header.svg" alt="SHEcycle Logo" class="header-logo">
+  </div>
   <ul class="nav-links">
     <li><a routerLink="/">Home</a></li>
     
     <li class="dropdown">
       <a routerLink="/items">Items</a>
       <div class="dropdown-menu">
-        <a (click)="filterItems('all')">All Items</a>
+        <a [routerLink]="['/items', 'all']">All Items</a>
     
         <div class="dropdown-section">
           <strong>Category:</strong>
-          <a (click)="filterItems('Casual')">Casual</a>
-          <a (click)="filterItems('Athletic')">Athletic</a>
-          <a (click)="filterItems('Business')">Business</a>
-          <a (click)="filterItems('Going-Out')">Going-Out</a>
-          <a (click)="filterItems('Outerwear')">Outerwear</a>
-          <a (click)="filterItems('Accessories')">Accessories</a>
+          <a [routerLink]="['/items', 'category', 'Casual']">Casual</a>
+          <a [routerLink]="['/items', 'category', 'Athletic']">Athletic</a>
+          <a [routerLink]="['/items', 'category', 'Business']">Business</a>
+          <a [routerLink]="['/items', 'category', 'Going-Out']">Going-Out</a>
+          <a [routerLink]="['/items', 'category', 'Outerwear']">Outerwear</a>
+          <a [routerLink]="['/items', 'category', 'Accessories']">Accessories</a>
         </div>
     
         <div class="dropdown-section">
           <strong>Type:</strong>
-          <a (click)="filterItems('Tops')">Tops</a>
-          <a (click)="filterItems('Pants')">Pants</a>
-          <a (click)="filterItems('Sweaters')">Sweaters</a>
-          <a (click)="filterItems('Jackets')">Jackets</a>
-          <a (click)="filterItems('Skirts')">Skirts</a>
-          <a (click)="filterItems('Dresses')">Dresses</a>
+          <a [routerLink]="['/items', 'type', 'Tops']">Tops</a>
+          <a [routerLink]="['/items', 'type', 'Pants']">Pants</a>
+          <a [routerLink]="['/items', 'type', 'Sweaters']">Sweaters</a>
+          <a [routerLink]="['/items', 'type', 'Jackets']">Jackets</a>
+          <a [routerLink]="['/items', 'type', 'Skirts']">Skirts</a>
+          <a [routerLink]="['/items', 'type', 'Dresses']">Dresses</a>
         </div>
       </div>
     </li>
