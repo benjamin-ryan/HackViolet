@@ -1,0 +1,35 @@
+<nav>
+  <div class="logo">SHEcycle</div>
+  <ul class="nav-links">
+    <li><a routerLink="/">Home</a></li>
+    
+    <li class="dropdown">
+      <a routerLink="/items">Items</a>
+      <div class="dropdown-menu">
+        <a (click)="filterItems('all')">All Items</a>
+    
+        <div class="dropdown-section">
+          <strong>Category:</strong>
+          <a (click)="filterItems('Casual')">Casual</a>
+          <a (click)="filterItems('Athletic')">Athletic</a>
+          <a (click)="filterItems('Business')">Business</a>
+          <a (click)="filterItems('Going-Out')">Going-Out</a>
+          <a (click)="filterItems('Outerwear')">Outerwear</a>
+          <a (click)="filterItems('Accessories')">Accessories</a>
+        </div>
+    
+        <div class="dropdown-section">
+          <strong>Type:</strong>
+          <a (click)="filterItems('Tops')">Tops</a>
+          <a (click)="filterItems('Pants')">Pants</a>
+          <a (click)="filterItems('Sweaters')">Sweaters</a>
+          <a (click)="filterItems('Jackets')">Jackets</a>
+          <a (click)="filterItems('Skirts')">Skirts</a>
+          <a (click)="filterItems('Dresses')">Dresses</a>
+        </div>
+      </div>
+    </li>
+
+    <li><a routerLink="/about">About</a></li>
+  </ul>
+</nav>

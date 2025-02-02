@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cors from 'cors';
+import itemRoutes from './src/routes/itemRoutes.js';
 
 dotenv.config(); // Load environment variables
 
@@ -10,6 +11,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors());
+app.use('/api/items', itemRoutes);
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {

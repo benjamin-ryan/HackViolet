@@ -1,0 +1,112 @@
+/* Style the navbar */
+nav {
+    background: #4CAF50; /* Default green */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Style SHEcycle logo */
+.logo {
+    font-size: 36px;
+    color: white;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Center nav links */
+.nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0px;
+    list-style: none;
+    height: 100%;
+    align-items: center;
+}
+
+/* Style the links */
+.nav-links li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Make the entire area clickable */
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 15px;
+}
+
+.nav-links li:hover {
+    background-color: #388E3C; /* Darker green */
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #4CAF50;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style dropdown links */
+.dropdown-menu a {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+/* Highlight links on hover */
+.dropdown-menu a:hover {
+    background: #388E3C;
+    color: white;
+}
+
+/* Style dropdown sections */
+.dropdown-section {
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 5px;
+}
+
+.dropdown-section strong {
+    display: block;
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}

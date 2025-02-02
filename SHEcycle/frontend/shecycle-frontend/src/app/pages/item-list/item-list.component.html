@@ -1,0 +1,12 @@
+<p>item-list works!</p>
+
+<div class="items-container">
+    <h1>Clothing Items</h1>
+    <ul>
+      <li *ngFor="let item of filteredItems">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.description }}</p>
+        <img [src]="item.imageUrl" alt="{{ item.name }}" width="100">
+      </li>
+    </ul>
+  </div>
